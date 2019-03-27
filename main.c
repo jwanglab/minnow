@@ -105,10 +105,12 @@ int main(int argc, char *argv[]) {
 
   if(read_fasta == NULL) {
     fprintf(stderr, "-q reads FASTA/Q[.gz] is required\n");
+    usage();
     return 1;
   }
   if(ref_fasta == NULL) {
     fprintf(stderr, "-r reference FASTA is required\n");
+    usage();
     return 1;
   }
 

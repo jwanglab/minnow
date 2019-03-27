@@ -29,7 +29,7 @@ Usage
 minnow requires a reference transcriptome (currently NOT a whole genome) and long reads.
 Both may be FASTA or FASTQ and optionally gzipped.
 
-For humans, you probably want [the RefSeq transcriptome].(ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_rna.fna.gz)
+For humans, you probably want [the RefSeq transcriptome](ftp://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_rna.fna.gz).
 
     ./minnow -r transcripts.fa -q reads.fq > tpm.tsv
 

@@ -1,7 +1,7 @@
 minnow
 ======
 
-A lightweight but complete tool to generate transcript abundances from ONT Direct RNA sequences
+A lightweight transcript quantifier for full-length RNA/cDNA sequences
 
 
 Installation
@@ -29,9 +29,9 @@ Usage
 minnow requires a reference transcriptome (currently NOT a whole genome) and long reads.
 Both may be FASTA or FASTQ and optionally gzipped.
 
-For humans, you probably want [the RefSeq transcriptome](http://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/GRCh38_latest_rna.fna.gz).
+For humans, we use all Ensembl [cDNA](https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz) and [ncRNA](https://ftp.ensembl.org/pub/release-109/fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz).
 
-    ./minnow -r transcripts.fa -q reads.fq > tpm.tsv
+    ./minnow -r Homo_sapiens.GRCh38.cdna.ncrna.fa.gz -q reads.fq > tpm.tsv
 
     Options:
       -q: FASTA/Q[.gz] file with reads (required)
@@ -54,10 +54,3 @@ they are each assigned a partial read. TPM is just normalized as though there we
     XM_011530291.3  3.000000  6.238498
     XR_001749299.1  0.166667  0.346583
     ...
-
-Features
---------
-
-Right now, that's all you get, but in the future I might add spliced
-alignment so that a reference genome and ideally some annotation can
-be provided instead of a transcriptome.

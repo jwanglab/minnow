@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-std=c99 -O2 # -g for line #s in valgrind
+CFLAGS=-std=gnu99 -O2 # -g for line #s in valgrind
 
 OBJECTS = minnow
 

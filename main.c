@@ -223,7 +223,7 @@ int main(int argc, char *argv[]) {
         mm_reg1_t *reg;
         int j, i, n_reg;
         if(verbose) {
-          fprintf(stderr, "Processing read %d (%s, %u bp)\n", n, ks->name.s, ks->seq.l);
+          fprintf(stderr, "Processing read %d (%s, %zu bp)\n", n, ks->name.s, ks->seq.l);
         }
         reg = mm_map(mi, ks->seq.l, ks->seq.s, &n_reg, tbuf, &mopt, 0); // get all hits for the query
         if(verbose) {
